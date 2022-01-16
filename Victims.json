@@ -1,449 +1,364 @@
 [
   {
     "0xF2b6fd13a18a33e4A9E108353E1d975Fd7C330b4": {
-      "address": "0xF2b6fd13a18a33e4A9E108353E1d975Fd7C330b4",
-      "amountNum": 0.11051978997537766,
-      "amountWei": "110519789975377654"
+      "btrflyAmount": 4.813382955714145,
+      "btrflyAmountWei": 4813382955714145000
     },
     "0x9bC5b135C2F8A029195cbb1189398e9f55D6eB31": {
-      "address": "0x9bC5b135C2F8A029195cbb1189398e9f55D6eB31",
-      "amountNum": 37.52835281034208,
-      "amountWei": "37528352810342081152"
+      "btrflyAmount": 37.528352831336086,
+      "btrflyAmountWei": 37528352831336080000
     },
     "0xE2626fbb35c6Ce84962e1c8e8AdCef1d00247477": {
-      "address": "0xE2626fbb35c6Ce84962e1c8e8AdCef1d00247477",
-      "amountNum": 2.886366161302182,
-      "amountWei": "2886366161302182156"
+      "btrflyAmount": 94.99999999999999,
+      "btrflyAmountWei": 94999999999999980000
     },
     "0x1433B7f520319E8C8A8a92d5d5C11Fd8013C9e75": {
-      "address": "0x1433B7f520319E8C8A8a92d5d5C11Fd8013C9e75",
-      "amountNum": 5.80816465976553,
-      "amountWei": "5808164659765529697"
+      "btrflyAmount": 13.659351919989327,
+      "btrflyAmountWei": 13659351919989326000
     },
     "0x975ca876Afa6D5E71EAAAd8F86a21dBA32e2b1E1": {
-      "address": "0x975ca876Afa6D5E71EAAAd8F86a21dBA32e2b1E1",
-      "amountNum": 17.302482399631412,
-      "amountWei": "17302482399631413364"
+      "btrflyAmount": 82.69751760036858,
+      "btrflyAmountWei": 82697517600368590000
     },
     "0xDbB7DdF59357b1d8399Ea9Fdb007518B6F8F2a07": {
-      "address": "0xDbB7DdF59357b1d8399Ea9Fdb007518B6F8F2a07",
-      "amountNum": 1.5826823411171242,
-      "amountWei": "1582682341117124227"
+      "btrflyAmount": 12.80096493746144,
+      "btrflyAmountWei": 12800964937461440000
     },
     "0x700E75593dCcbb0d9dE117Af8ba084382A63d576": {
-      "address": "0x700E75593dCcbb0d9dE117Af8ba084382A63d576",
-      "amountNum": 1.7357513080170148,
-      "amountWei": "1735751308017014917"
+      "btrflyAmount": 82.26424869198298,
+      "btrflyAmountWei": 82264248691982990000
     },
     "0x0ABd85014e890eb3b30C4Eb7Da5DDd4548c3ddCD": {
-      "address": "0x0ABd85014e890eb3b30C4Eb7Da5DDd4548c3ddCD",
-      "amountNum": 3.6290485613663455,
-      "amountWei": "3629048561366345593"
+      "btrflyAmount": 4.530855829314162,
+      "btrflyAmountWei": 4530855829314162700
     },
     "0x082E9C0Bd157d085851Dcb439Df845eA652cb823": {
-      "address": "0x082E9C0Bd157d085851Dcb439Df845eA652cb823",
-      "amountNum": 0.23996283208789787,
-      "amountWei": "239962832087897875"
+      "btrflyAmount": 39.36003716791211,
+      "btrflyAmountWei": 39360037167912100000
     },
     "0x9768339588DD531096222A99c4d258d646b76a80": {
-      "address": "0x9768339588DD531096222A99c4d258d646b76a80",
-      "amountNum": 0.5476982550676535,
-      "amountWei": "547698255067653406"
+      "btrflyAmount": 1.0560213391025106,
+      "btrflyAmountWei": 1056021339102510600
     },
     "0xD3860466ddeb2580285F3A8843e464012F171694": {
-      "address": "0xD3860466ddeb2580285F3A8843e464012F171694",
-      "amountNum": 1.4909147651722647,
-      "amountWei": "1490914765172264794"
+      "btrflyAmount": 11.826174543323042,
+      "btrflyAmountWei": 11826174543323042000
     },
     "0xd7E228b7eB0c727706d5955c4c518CB10a3E7a19": {
-      "address": "0xd7E228b7eB0c727706d5955c4c518CB10a3E7a19",
-      "amountNum": 14.586330733892636,
-      "amountWei": "14586330733892635485"
+      "btrflyAmount": 25.413669266107362,
+      "btrflyAmountWei": 25413669266107363000
     },
     "0xd54AA07a5E77bcc0269e2F1a830139Fb72D818A9": {
-      "address": "0xd54AA07a5E77bcc0269e2F1a830139Fb72D818A9",
-      "amountNum": 39.39913892965785,
-      "amountWei": "39399138929657852211"
+      "btrflyAmount": 40.60086107034215,
+      "btrflyAmountWei": 40600861070342140000
     },
     "0x4b41D5a8466710F265C2f476C98dd43a6553A913": {
-      "address": "0x4b41D5a8466710F265C2f476C98dd43a6553A913",
-      "amountNum": 1.9813382460236573,
-      "amountWei": "1981338246023657291"
+      "btrflyAmount": 1.9813382460236573,
+      "btrflyAmountWei": 1981338246023657200
     },
     "0x4c6Ba159d72069d692eD18d49339Dc31D2394C15": {
-      "address": "0x4c6Ba159d72069d692eD18d49339Dc31D2394C15",
-      "amountNum": 23.590447519547762,
-      "amountWei": "23590447519547761641"
+      "btrflyAmount": 23.590447519547762,
+      "btrflyAmountWei": 23590447519547760000
     },
     "0xDBeF9b0a75732966C61B014E8471d5dD7C215E0F": {
-      "address": "0xDBeF9b0a75732966C61B014E8471d5dD7C215E0F",
-      "amountNum": 0.2786408530099575,
-      "amountWei": "278640853009957519"
+      "btrflyAmount": 6.921359146990042,
+      "btrflyAmountWei": 6921359146990043000
     },
     "0xe65572aeB09776e097ad49bA86B3C39FA4ab533d": {
-      "address": "0xe65572aeB09776e097ad49bA86B3C39FA4ab533d",
-      "amountNum": 5.251018408313726,
-      "amountWei": "5251018408313726071"
+      "btrflyAmount": 5.251018408313726,
+      "btrflyAmountWei": 5251018408313726000
     },
     "0x3e86a382B8e4e2F85A4c334ccD50fF5184BA5181": {
-      "address": "0x3e86a382B8e4e2F85A4c334ccD50fF5184BA5181",
-      "amountNum": 0.6900801088298244,
-      "amountWei": "690080108829824353"
+      "btrflyAmount": 8.009919891170176,
+      "btrflyAmountWei": 8009919891170176000
     },
     "0xa43deA86853f5ed8F767E36E16fD20b36B07769D": {
-      "address": "0xa43deA86853f5ed8F767E36E16fD20b36B07769D",
-      "amountNum": 1.6852837593038734,
-      "amountWei": "1685283759303873338"
+      "btrflyAmount": 12.714716240696127,
+      "btrflyAmountWei": 12714716240696127000
     },
     "0x114Df51C70E4F1BAA92C57C9cDe821936FB26A0a": {
-      "address": "0x114Df51C70E4F1BAA92C57C9cDe821936FB26A0a",
-      "amountNum": 7.22298213e-10,
-      "amountWei": "722298213"
+      "btrflyAmount": 2.88919285228163,
+      "btrflyAmountWei": 2889192852281630000
     },
     "0x94046B4000fefc937F9AE219E2d92bf44A36393E": {
-      "address": "0x94046B4000fefc937F9AE219E2d92bf44A36393E",
-      "amountNum": 3.9639347279486614,
-      "amountWei": "3963934727948661556"
+      "btrflyAmount": 21.03606527205134,
+      "btrflyAmountWei": 21036065272051340000
     },
     "0xc295619e17dBc63ca217EA3a70b33Ff62D8A3144": {
-      "address": "0xc295619e17dBc63ca217EA3a70b33Ff62D8A3144",
-      "amountNum": 0.058393918344530414,
-      "amountWei": "58393918344530417"
+      "btrflyAmount": 15.301606081655471,
+      "btrflyAmountWei": 15301606081655470000
     },
     "0xCc36C0F7DFd435Eb91C00A513059B83e744f94c2": {
-      "address": "0xCc36C0F7DFd435Eb91C00A513059B83e744f94c2",
-      "amountNum": 2.8151052870435342,
-      "amountWei": "2815105287043534067"
+      "btrflyAmount": 13.184894712956467,
+      "btrflyAmountWei": 13184894712956465000
     },
     "0x72561CB4C095228230bdbF7B8005440A68576399": {
-      "address": "0x72561CB4C095228230bdbF7B8005440A68576399",
-      "amountNum": 975.6640625361771,
-      "amountWei": "975664062536177129958"
+      "btrflyAmount": 24.33593746382287,
+      "btrflyAmountWei": 24335937463822870000
     },
     "0x6BB7Bfb42e91372cC9b042282C558a2a0d16b426": {
-      "address": "0x6BB7Bfb42e91372cC9b042282C558a2a0d16b426",
-      "amountNum": 0.6353106012329608,
-      "amountWei": "635310601232960794"
+      "btrflyAmount": 0.6353106012329608,
+      "btrflyAmountWei": 635310601232960800
     },
     "0xC5129824AaE16A57228d31763fF870bD2fB80494": {
-      "address": "0xC5129824AaE16A57228d31763fF870bD2fB80494",
-      "amountNum": 2.687810286644014,
-      "amountWei": "2687810286644014137"
+      "btrflyAmount": 5.131881124566786,
+      "btrflyAmountWei": 5131881124566786000
     },
     "0x3c3481862c4f28bE3B04A135f5dB91a194870eC8": {
-      "address": "0x3c3481862c4f28bE3B04A135f5dB91a194870eC8",
-      "amountNum": 1.2551848360970903,
-      "amountWei": "1255184836097090330"
+      "btrflyAmount": 4.367593549176605,
+      "btrflyAmountWei": 4367593549176604700
     },
     "0xDcEfA3eC44cB5206288505889594FbA5A7a9E9FA": {
-      "address": "0xDcEfA3eC44cB5206288505889594FbA5A7a9E9FA",
-      "amountNum": 2.094932368655897,
-      "amountWei": "2094932368655896755"
+      "btrflyAmount": 2.094932368655897,
+      "btrflyAmountWei": 2094932368655896800
     },
     "0x2a06d90d7BF42cc5E5866B8c00aDF4E43ea25A7b": {
-      "address": "0x2a06d90d7BF42cc5E5866B8c00aDF4E43ea25A7b",
-      "amountNum": 1.6729382318831292,
-      "amountWei": "1672938231883129090"
+      "btrflyAmount": 6.327061768116871,
+      "btrflyAmountWei": 6327061768116871000
     },
     "0xe53070Ec370342dF2dE453c7092f0E0B6FB73Ff3": {
-      "address": "0xe53070Ec370342dF2dE453c7092f0E0B6FB73Ff3",
-      "amountNum": 1.92452156e-10,
-      "amountWei": "192452156"
+      "btrflyAmount": 4.068706151722069,
+      "btrflyAmountWei": 4068706151722069500
     },
     "0x0df95ab2097909B676be97AA90c73788D63EA503": {
-      "address": "0x0df95ab2097909B676be97AA90c73788D63EA503",
-      "amountNum": 27.625092871438515,
-      "amountWei": "27625092871438513444"
+      "btrflyAmount": 10,
+      "btrflyAmountWei": 10000000000000000000
     },
     "0x06c64b65Ce7e07AF2Dd7Ca4B87ED6AE2a4dEF45E": {
-      "address": "0x06c64b65Ce7e07AF2Dd7Ca4B87ED6AE2a4dEF45E",
-      "amountNum": 9.999977101862687,
-      "amountWei": "9999977101862686194"
+      "btrflyAmount": 40.00002289813732,
+      "btrflyAmountWei": 40000022898137320000
     },
     "0xcD0178f74A71640E5B8aAD7A5ad95A65626D703F": {
-      "address": "0xcD0178f74A71640E5B8aAD7A5ad95A65626D703F",
-      "amountNum": 6.88922617e-10,
-      "amountWei": "688922617"
+      "btrflyAmount": 0.2411229153447031,
+      "btrflyAmountWei": 241122915344703100
     },
     "0x181C9feceDF733864670C75BB92a30404622A164": {
-      "address": "0x181C9feceDF733864670C75BB92a30404622A164",
-      "amountNum": 2.2749790891607073,
-      "amountWei": "2274979089160707362"
+      "btrflyAmount": 2.2749790891607073,
+      "btrflyAmountWei": 2274979089160707300
     },
     "0x3657fec4a2e4cbe264a7aaA298c32904bF8CCE93": {
-      "address": "0x3657fec4a2e4cbe264a7aaA298c32904bF8CCE93",
-      "amountNum": 0.7502516590081263,
-      "amountWei": "750251659008126276"
+      "btrflyAmount": 7.500048340991874,
+      "btrflyAmountWei": 7500048340991874000
     },
     "0x1AD19c7f368E3E984B726B130AE9E5A4354f9F32": {
-      "address": "0x1AD19c7f368E3E984B726B130AE9E5A4354f9F32",
-      "amountNum": 2.94246969509036,
-      "amountWei": "2942469695090359803"
+      "btrflyAmount": 15.83319304511079,
+      "btrflyAmountWei": 15833193045110788000
     },
     "0xECa6c127bf44b240D7ff7Db0820Bb0b43195c92a": {
-      "address": "0xECa6c127bf44b240D7ff7Db0820Bb0b43195c92a",
-      "amountNum": 6.11298707e-10,
-      "amountWei": "611298707"
+      "btrflyAmount": 4.526234287204718,
+      "btrflyAmountWei": 4526234287204718000
     },
     "0x93293f3117fD5398A11A20674a6Deae2Ac51B099": {
-      "address": "0x93293f3117fD5398A11A20674a6Deae2Ac51B099",
-      "amountNum": 7.340087649644133,
-      "amountWei": "7340087649644133042"
+      "btrflyAmount": 6.942366453678407,
+      "btrflyAmountWei": 6942366453678407000
     },
     "0xf825563Ae48C5cc7a9527D23cD427f45e509E6dA": {
-      "address": "0xf825563Ae48C5cc7a9527D23cD427f45e509E6dA",
-      "amountNum": 0.2312,
-      "amountWei": "231200000000000000"
+      "btrflyAmount": 1.000003839505333,
+      "btrflyAmountWei": 1000003839505333000
     },
     "0xFF2779E68e24b725c625F514Acb36736a23391e8": {
-      "address": "0xFF2779E68e24b725c625F514Acb36736a23391e8",
-      "amountNum": 1.6330046183858165,
-      "amountWei": "1633004618385816443"
+      "btrflyAmount": 3.3669953816141835,
+      "btrflyAmountWei": 3366995381614183400
     },
     "0x3d119E0236bB85469b62248b4976F51aaFa66fb6": {
-      "address": "0x3d119E0236bB85469b62248b4976F51aaFa66fb6",
-      "amountNum": 0.13589741758513652,
-      "amountWei": "135897417585136520"
+      "btrflyAmount": 0.7461958457767444,
+      "btrflyAmountWei": 746195845776744400
     },
     "0x98De69Fc87790bF9679e5B781a03e6821F3d2F75": {
-      "address": "0x98De69Fc87790bF9679e5B781a03e6821F3d2F75",
-      "amountNum": 10.736388858595179,
-      "amountWei": "10736388858595179542"
+      "btrflyAmount": 33.21781114140482,
+      "btrflyAmountWei": 33217811141404820000
     },
     "0xfF1EbDf738b9BD28c02Cd9914F4dD7834DCB41dd": {
-      "address": "0xfF1EbDf738b9BD28c02Cd9914F4dD7834DCB41dd",
-      "amountNum": 2.0457943840429262,
-      "amountWei": "2045794384042926145"
+      "btrflyAmount": 2.0457943840429262,
+      "btrflyAmountWei": 2045794384042926000
     },
     "0x66d4908E053F7150038b1bF3579cF384fde0BA72": {
-      "address": "0x66d4908E053F7150038b1bF3579cF384fde0BA72",
-      "amountNum": 9.51817882501395,
-      "amountWei": "9518178825013949331"
+      "btrflyAmount": 1.2814570663153584,
+      "btrflyAmountWei": 1281457066315358500
     },
     "0x4f4e0aF59e7702F3F8e03626EA24F99577Cc75fE": {
-      "address": "0x4f4e0aF59e7702F3F8e03626EA24F99577Cc75fE",
-      "amountNum": 7.30212278047129,
-      "amountWei": "7302122780471289985"
+      "btrflyAmount": 19.69787721952871,
+      "btrflyAmountWei": 19697877219528710000
     },
     "0x7F82e84C2021a311131e894ceFf475047deD4673": {
-      "address": "0x7F82e84C2021a311131e894ceFf475047deD4673",
-      "amountNum": 1.7080280632876863,
-      "amountWei": "1708028063287686385"
+      "btrflyAmount": 5.291971936712313,
+      "btrflyAmountWei": 5291971936712314000
     },
     "0xD0FE971732E547059eA6009c79a2d6155bdb41a4": {
-      "address": "0xD0FE971732E547059eA6009c79a2d6155bdb41a4",
-      "amountNum": 0.7996737274973192,
-      "amountWei": "799673727497319242"
+      "btrflyAmount": 2.5568262725026805,
+      "btrflyAmountWei": 2556826272502680600
     },
     "0x49693B875D8ce023BDb5234E563680Ff0C7e3354": {
-      "address": "0x49693B875D8ce023BDb5234E563680Ff0C7e3354",
-      "amountNum": 1.374782520131721,
-      "amountWei": "1374782520131720871"
+      "btrflyAmount": 6.6252174798682795,
+      "btrflyAmountWei": 6625217479868279000
     },
     "0xBCff81420d024627eDd07AB9468Aff7881805D57": {
-      "address": "0xBCff81420d024627eDd07AB9468Aff7881805D57",
-      "amountNum": 0.3126048414870523,
-      "amountWei": "312604841487052284"
+      "btrflyAmount": 14.999995158512947,
+      "btrflyAmountWei": 14999995158512947000
     },
     "0xA828b438b054944BD0d6bbf475844Ae65Ed01670": {
-      "address": "0xA828b438b054944BD0d6bbf475844Ae65Ed01670",
-      "amountNum": 13.016746535362852,
-      "amountWei": "13016746535362851797"
+      "btrflyAmount": 38.2499084640619,
+      "btrflyAmountWei": 38249908464061910000
     },
     "0xb9d3470B2Ce9050be1C614898c4A07085245ebfc": {
-      "address": "0xb9d3470B2Ce9050be1C614898c4A07085245ebfc",
-      "amountNum": 0.4545654635540475,
-      "amountWei": "454565463554047496"
+      "btrflyAmount": 1.0000345364459524,
+      "btrflyAmountWei": 1000034536445952500
     },
     "0x42FD445E08c89e264695E3687d3fD3547C75d6B2": {
-      "address": "0x42FD445E08c89e264695E3687d3fD3547C75d6B2",
-      "amountNum": 0.3634315686194354,
-      "amountWei": "363431568619435364"
+      "btrflyAmount": 0.886513127676155,
+      "btrflyAmountWei": 886513127676155000
     },
     "0x424e97e814322BE193cC78854517cC7AFb2e1910": {
-      "address": "0x424e97e814322BE193cC78854517cC7AFb2e1910",
-      "amountNum": 18.314852217085374,
-      "amountWei": "18314852217085373796"
+      "btrflyAmount": 18.314852217085374,
+      "btrflyAmountWei": 18314852217085374000
     },
     "0x8e49A1f95c77965d53714876B775d76BCBe2c171": {
-      "address": "0x8e49A1f95c77965d53714876B775d76BCBe2c171",
-      "amountNum": 0.35273943723876244,
-      "amountWei": "352739437238762438"
+      "btrflyAmount": 1.6472605627612376,
+      "btrflyAmountWei": 1647260562761237500
     },
     "0xE199fb97006cbeFF5e5961AC7b464Cb9CdC7588e": {
-      "address": "0xE199fb97006cbeFF5e5961AC7b464Cb9CdC7588e",
-      "amountNum": 0.7850524003665291,
-      "amountWei": "785052400366529166"
+      "btrflyAmount": 2.214947599633471,
+      "btrflyAmountWei": 2214947599633471000
     },
     "0x88Aa12Cb8a52d68ca3bebfE777391Be892606AC8": {
-      "address": "0x88Aa12Cb8a52d68ca3bebfE777391Be892606AC8",
-      "amountNum": 0.22025077795786138,
-      "amountWei": "220250777957861371"
+      "btrflyAmount": 1.0597492220421385,
+      "btrflyAmountWei": 1059749222042138600
     },
     "0x9fFa7af1ecEF27C9fE260986Cd3550D58085fA98": {
-      "address": "0x9fFa7af1ecEF27C9fE260986Cd3550D58085fA98",
-      "amountNum": 0.05143115240338933,
-      "amountWei": "51431152403389333"
+      "btrflyAmount": 0.8485688475966106,
+      "btrflyAmountWei": 848568847596610700
     },
     "0x4e2FBc133a08bb0926d30B43df85e56509E01721": {
-      "address": "0x4e2FBc133a08bb0926d30B43df85e56509E01721",
-      "amountNum": 685.0982226560145,
-      "amountWei": "685098222656014495033"
+      "btrflyAmount": 14.901777343985504,
+      "btrflyAmountWei": 14901777343985504000
     },
     "0x5303894Be8f5245A9369F3b1A9dAE3dec4C814Cc": {
-      "address": "0x5303894Be8f5245A9369F3b1A9dAE3dec4C814Cc",
-      "amountNum": 0.6341902491682408,
-      "amountWei": "634190249168240899"
+      "btrflyAmount": 9.865809750831758,
+      "btrflyAmountWei": 9865809750831760000
     },
     "0xba68889e76d5FfAb92af0302C52Cf116cADF690a": {
-      "address": "0xba68889e76d5FfAb92af0302C52Cf116cADF690a",
-      "amountNum": 90.64956606104901,
-      "amountWei": "90649566061049021435"
+      "btrflyAmount": 9.35043393895098,
+      "btrflyAmountWei": 9350433938950980000
     },
     "0x4d567eae479Bfa391C33Ea78A97652A82852A965": {
-      "address": "0x4d567eae479Bfa391C33Ea78A97652A82852A965",
-      "amountNum": 0.774203719542876,
-      "amountWei": "774203719542876048"
+      "btrflyAmount": 3.008989576807998,
+      "btrflyAmountWei": 3008989576807998000
     },
     "0xeCf4A9c5CB20c2F1D99218f2A862C7F38984Ab2f": {
-      "address": "0xeCf4A9c5CB20c2F1D99218f2A862C7F38984Ab2f",
-      "amountNum": 4.25550356e-10,
-      "amountWei": "425550356"
+      "btrflyAmount": 4.6161823368889285,
+      "btrflyAmountWei": 4616182336888928000
     },
     "0x2C4fE365db09aD149d9caeC5fd9a42f60A0cf1a3": {
-      "address": "0x2C4fE365db09aD149d9caeC5fd9a42f60A0cf1a3",
-      "amountNum": 0.5235116542347517,
-      "amountWei": "523511654234751649"
+      "btrflyAmount": 15.47648834576525,
+      "btrflyAmountWei": 15476488345765250000
     },
     "0xb9A708c67E2e13035a5Feb0F1a2f9e3B625EbD62": {
-      "address": "0xb9A708c67E2e13035a5Feb0F1a2f9e3B625EbD62",
-      "amountNum": 6.773913527636209,
-      "amountWei": "6773913527636209145"
+      "btrflyAmount": 20.04973782257955,
+      "btrflyAmountWei": 20049737822579550000
     },
     "0x31745020E0Ac7FFB5AF5de0fE5537f2a7BbE9D27": {
-      "address": "0x31745020E0Ac7FFB5AF5de0fE5537f2a7BbE9D27",
-      "amountNum": 7.532772759677369,
-      "amountWei": "7532772759677368453"
+      "btrflyAmount": 7.532772759677369,
+      "btrflyAmountWei": 7532772759677368000
     },
     "0x6ed0e0a9FDB1E48EB8D09b10B327ee510EFb7007": {
-      "address": "0x6ed0e0a9FDB1E48EB8D09b10B327ee510EFb7007",
-      "amountNum": 7.734423444660969,
-      "amountWei": "7734423444660969141"
+      "btrflyAmount": 1.1945945122521615,
+      "btrflyAmountWei": 1194594512252161500
     },
     "0xB384ac0d1f42Bd1B40bC619bFcf733af66Bcdd35": {
-      "address": "0xB384ac0d1f42Bd1B40bC619bFcf733af66Bcdd35",
-      "amountNum": 0.8857769466133871,
-      "amountWei": "885776946613387139"
+      "btrflyAmount": 0.4409020570312909,
+      "btrflyAmountWei": 440902057031290900
     },
     "0x619ebca22fFaF1fB0aAC8Fb47288aE7A55913A6d": {
-      "address": "0x619ebca22fFaF1fB0aAC8Fb47288aE7A55913A6d",
-      "amountNum": 28.92315764405471,
-      "amountWei": "28923157644054710864"
+      "btrflyAmount": 71.07684235594529,
+      "btrflyAmountWei": 71076842355945290000
     },
     "0x1F68AAf4edB396186b574eed8115C66435160AA1": {
-      "address": "0x1F68AAf4edB396186b574eed8115C66435160AA1",
-      "amountNum": 1.5967714220677935,
-      "amountWei": "1596771422067793549"
+      "btrflyAmount": 2.0000285779322065,
+      "btrflyAmountWei": 2000028577932206300
     },
     "0x79764F807aBA7CB9292C3a81BA89065f54aa1BB8": {
-      "address": "0x79764F807aBA7CB9292C3a81BA89065f54aa1BB8",
-      "amountNum": 5.23376696e-10,
-      "amountWei": "523376696"
+      "btrflyAmount": 0.3379227662703203,
+      "btrflyAmountWei": 337922766270320300
     },
     "0x3E21a2213e38F29ec6D707EA9C430D952983d6e4": {
-      "address": "0x3E21a2213e38F29ec6D707EA9C430D952983d6e4",
-      "amountNum": 2.6936551738823615,
-      "amountWei": "2693655173882361409"
+      "btrflyAmount": 2.6936551738823615,
+      "btrflyAmountWei": 2693655173882361300
     },
     "0x8d26C9DAC7E16738752fa1446b956A97C63e2F39": {
-      "address": "0x8d26C9DAC7E16738752fa1446b956A97C63e2F39",
-      "amountNum": 3.2340403069265498,
-      "amountWei": "3234040306926549811"
+      "btrflyAmount": 9.13638739868386,
+      "btrflyAmountWei": 9136387398683861000
     },
     "0x6873bB7e0Af2Cd23639f358e410fe686DD64FA55": {
-      "address": "0x6873bB7e0Af2Cd23639f358e410fe686DD64FA55",
-      "amountNum": 6.9832,
-      "amountWei": "6983200000000000000"
+      "btrflyAmount": 6.9832,
+      "btrflyAmountWei": 6983200000000000000
     },
     "0x396eA2C0239C1bD6059C9D71d296dd0f3fa05cd8": {
-      "address": "0x396eA2C0239C1bD6059C9D71d296dd0f3fa05cd8",
-      "amountNum": 0.8705138285241151,
-      "amountWei": "870513828524115047"
+      "btrflyAmount": 0.8705138285241151,
+      "btrflyAmountWei": 870513828524115100
     },
     "0x190099bd4452653e5a38FB2FE42fB15710E7b324": {
-      "address": "0x190099bd4452653e5a38FB2FE42fB15710E7b324",
-      "amountNum": 1.1874071186516606,
-      "amountWei": "1187407118651660616"
+      "btrflyAmount": 18.81259288134834,
+      "btrflyAmountWei": 18812592881348338000
     },
     "0x08C476B96c8D22B4c8ba1325924a13B4C4236755": {
-      "address": "0x08C476B96c8D22B4c8ba1325924a13B4C4236755",
-      "amountNum": 0.1438121473174318,
-      "amountWei": "143812147317431802"
+      "btrflyAmount": 7.310587852682568,
+      "btrflyAmountWei": 7310587852682568000
     },
     "0xf4a8E405481A15923C13022016Ea33827Ae87469": {
-      "address": "0xf4a8E405481A15923C13022016Ea33827Ae87469",
-      "amountNum": 2.4985534303493697,
-      "amountWei": "2498553430349369886"
+      "btrflyAmount": 12.50144656965063,
+      "btrflyAmountWei": 12501446569650630000
     },
     "0x262e32E50B33118AD6A08580971f00311687Fe27": {
-      "address": "0x262e32E50B33118AD6A08580971f00311687Fe27",
-      "amountNum": 0.00004496708705097,
-      "amountWei": "44967087050970"
+      "btrflyAmount": 7.514430032912949,
+      "btrflyAmountWei": 7514430032912949000
     },
     "0x1F0B6556ADBB7fDFd3277c9149a6cC6f4ade0683": {
-      "address": "0x1F0B6556ADBB7fDFd3277c9149a6cC6f4ade0683",
-      "amountNum": 6.764788745988945,
-      "amountWei": "6764788745988944780"
+      "btrflyAmount": 7.912211254011055,
+      "btrflyAmountWei": 7912211254011055000
     },
     "0x7323658EA0c514F6bf93e9A19EAE9D9A9ED76A63": {
-      "address": "0x7323658EA0c514F6bf93e9A19EAE9D9A9ED76A63",
-      "amountNum": 6.937028114001865,
-      "amountWei": "6937028114001864915"
+      "btrflyAmount": 6.937028114001865,
+      "btrflyAmountWei": 6937028114001865000
     },
     "0xD57196C1e96Af65E19B53601C4Cb8d3f3936FBc0": {
-      "address": "0xD57196C1e96Af65E19B53601C4Cb8d3f3936FBc0",
-      "amountNum": 2.5209833117184943,
-      "amountWei": "2520983311718494344"
+      "btrflyAmount": 2.0790166882815053,
+      "btrflyAmountWei": 2079016688281505500
     },
     "0x482445ba429B7Bfd7B640ada3d68b8Bb1876cf78": {
-      "address": "0x482445ba429B7Bfd7B640ada3d68b8Bb1876cf78",
-      "amountNum": 5.4087092880812095,
-      "amountWei": "5408709288081209485"
+      "btrflyAmount": 23.045893082034873,
+      "btrflyAmountWei": 23045893082034872000
     },
     "0x63Ce7C8d5336850AA0EC345E908B8cF6f979b913": {
-      "address": "0x63Ce7C8d5336850AA0EC345E908B8cF6f979b913",
-      "amountNum": 6.041559971784409,
-      "amountWei": "6041559971784409112"
+      "btrflyAmount": 6.041559971784409,
+      "btrflyAmountWei": 6041559971784409000
     },
     "0x93F4994CB44E46Da0b3f2E273c8DF63D40177Cb4": {
-      "address": "0x93F4994CB44E46Da0b3f2E273c8DF63D40177Cb4",
-      "amountNum": 0.1966393885697456,
-      "amountWei": "196639388569745609"
+      "btrflyAmount": 2.2033606114302544,
+      "btrflyAmountWei": 2203360611430254300
     },
     "0x1fd51540Eb1609F58499bDdef0B3C345D5d92E3C": {
-      "address": "0x1fd51540Eb1609F58499bDdef0B3C345D5d92E3C",
-      "amountNum": 2.3637032822688284,
-      "amountWei": "2363703282268828278"
+      "btrflyAmount": 2.363703282268828,
+      "btrflyAmountWei": 2363703282268828000
     },
     "0xCc8946bfa7c6420C387D13CBf260c1d7908f79Bd": {
-      "address": "0xCc8946bfa7c6420C387D13CBf260c1d7908f79Bd",
-      "amountNum": 99999950.58632326,
-      "amountWei": "99999950586323263051640417"
+      "btrflyAmount": 48.41367673694836,
+      "btrflyAmountWei": 48413676736948360000
     },
     "0xe7c6FDc0fcE19c85586a0C0fbf41f337ACf4F81f": {
-      "address": "0xe7c6FDc0fcE19c85586a0C0fbf41f337ACf4F81f",
-      "amountNum": 0.8418339249013503,
-      "amountWei": "841833924901350350"
+      "btrflyAmount": 0.8418339249013504,
+      "btrflyAmountWei": 841833924901350400
     },
     "0x0000075474aC68a55649EAF91583c17C34Fae88E": {
-      "address": "0x0000075474aC68a55649EAF91583c17C34Fae88E",
-      "amountNum": 986.3380209765484,
-      "amountWei": "986338020976548377053"
+      "btrflyAmount": 13.661979023451623,
+      "btrflyAmountWei": 13661979023451623000
     },
     "0x93Ea4e0c572f7067aFe4703012d9F7e82354c15D": {
-      "address": "0x93Ea4e0c572f7067aFe4703012d9F7e82354c15D",
-      "amountNum": 0.08770520730394096,
-      "amountWei": "87705207303940962"
+      "btrflyAmount": 0.912294792696059,
+      "btrflyAmountWei": 912294792696059000
+    },
+    "0x085C46B94eeA357279B301971f75eeBF5BC1377b": {
+      "btrflyAmount": 1191.8512202490638,
+      "btrflyAmountWei": 1.1918512202490637e21
     }
   }
 ]
