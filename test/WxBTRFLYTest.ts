@@ -66,10 +66,11 @@ describe("wxBTRFLY post-fix", function(){
     let guy0 : SignerWithAddress
     let guy1 : SignerWithAddress
     let guy2 : SignerWithAddress
+    let ruggyMcRuggerson : SignerWithAddress
 
     beforeEach( async function(){
 
-        [simp, guy0, guy1, guy2 ] = await ethers.getSigners()
+        [simp, guy0, guy1, guy2, ruggyMcRuggerson ] = await ethers.getSigners()
 
         multisig = await impersonateAddressAndReturnSigner(simp,MULTISIG_ADDRESS)
 
@@ -269,7 +270,6 @@ describe("wxBTRFLY post-fix", function(){
             const xbwx0 = await xbtrfly.balanceOf(wxbtrfly.address)
             console.log("wx contract balance : " + xbwx0)
 
-            await wxbtrfly.connect(guy1).approve(wxbtrfly.address,ethers.constants.MaxUint256)
             const wb1 = await wxbtrfly.balanceOf(guy1.address)
             const exxb1 = await wxbtrfly.xBTRFLYValue(wb1);
             console.log("expected xb1 = " + exxb1.toString())
@@ -280,7 +280,6 @@ describe("wxBTRFLY post-fix", function(){
             const xbwx1 = await xbtrfly.balanceOf(wxbtrfly.address)
             console.log("wx contract balance : " + xbwx1)
 
-            await wxbtrfly.connect(guy2).approve(wxbtrfly.address,ethers.constants.MaxUint256)
             const wb2 = await wxbtrfly.balanceOf(guy2.address)
             const exxb2 = await wxbtrfly.xBTRFLYValue(wb2);
             console.log("expected xb2 = " + exxb2.toString())
@@ -288,8 +287,38 @@ describe("wxBTRFLY post-fix", function(){
             const xb2 = await xbtrfly.balanceOf(guy2.address)
             console.log("real xb2 = " + xb2.toString())
             
-            expect(xb1.eq(xb0)).to.equal(true)
-            expect(xb2.eq(xb0)).to.equal(true)
+            expect(
+                ((xb1.sub(xb0)).abs()).lte(ethers.BigNumber.from('1000'))
+                ).to.equal(true)
+                
+            expect(
+                ((xb2.sub(xb0)).abs()).lte(ethers.BigNumber.from('1000'))
+                ).to.equal(true)
+
+        })
+
+    })
+
+    describe("exploit fix ", function(){
+
+        it("fixes the exploit", async function(){
+
+            //wrap
+            await btrfly.connect(guy1).approve(wxbtrfly.address,ethers.constants.MaxUint256)
+            await wxbtrfly.connect(guy1).wrapFromBTRFLY(ethers.utils.parseUnits('1000','gwei'))
+            //approve something for infinity
+            await wxbtrfly.connect(guy1).approve(wxbtrfly.address,ethers.constants.MaxUint256)
+            //ruggy tries to rug
+            await expect(wxbtrfly.connect(ruggyMcRuggerson).transferFrom(guy1.address,wxbtrfly.address,'0'))
+            const wb1 = await wxbtrfly.balanceOf(guy1.address)
+            const ruggysAllowance = await wxbtrfly.allowance(guy1.address,ruggyMcRuggerson.address)
+            expect( ruggysAllowance.eq(ethers.BigNumber.from('0'))).to.equal(true)
+            await expect(
+                wxbtrfly.connect(ruggyMcRuggerson).transferFrom(guy1.address,ruggyMcRuggerson.address,'1000')
+            ).to.be.revertedWith("ERC20: transfer amount exceeds allowance")
+            await expect(
+                wxbtrfly.connect(ruggyMcRuggerson).transferFrom(guy1.address,ruggyMcRuggerson.address,wb1)
+            ).to.be.revertedWith("ERC20: transfer amount exceeds allowance")
 
         })
 
