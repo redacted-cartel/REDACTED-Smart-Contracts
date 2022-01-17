@@ -18,12 +18,12 @@ import {
   ZERO_ADDRESS,
 } from './constants'
 
-import { WxBTRFLY, XBTRFLY, REDACTEDStaking, REDACTEDTreasury, IERC20 } from '../typechain'
+import { WXBTRFLY, XBTRFLY, REDACTEDStaking, REDACTEDTreasury, IERC20 } from '../typechain'
 
-import { BigNumber, Transaction } from 'ethers'
+import { BigNumber, Wallet } from 'ethers'
 import { SignerWithAddress } from '@nomiclabs/hardhat-ethers/signers'
-import { TransactionRequest } from '@ethersproject/abstract-provider'
 import { calldata } from './TestWxBtrfly'
+import { TransactionRequest } from '@ethersproject/providers'
 
 // Test setup
 // - fetch existing protocol
@@ -52,19 +52,20 @@ import { calldata } from './TestWxBtrfly'
 describe('wxBTRFLY post-fix', function () {
   let btrfly: IERC20
   let xbtrfly: XBTRFLY
-  let wxbtrfly: WxBTRFLY
+  let wxbtrfly: WXBTRFLY
+  let oldWxbtrfly: WXBTRFLY
   let staking: REDACTEDStaking
   let treasury: REDACTEDTreasury
-  let oldWxBtrfly: WxBTRFLY
 
   let multisig: SignerWithAddress
   let simp: SignerWithAddress
   let guy0: SignerWithAddress
   let guy1: SignerWithAddress
   let guy2: SignerWithAddress
+  let ruggyMcRuggerson: SignerWithAddress
 
   beforeEach(async function () {
-    ;[simp, guy0, guy1, guy2] = await ethers.getSigners()
+    ;[simp, guy0, guy1, guy2, ruggyMcRuggerson] = await ethers.getSigners()
 
     multisig = await impersonateAddressAndReturnSigner(simp, MULTISIG_ADDRESS)
 
@@ -76,24 +77,24 @@ describe('wxBTRFLY post-fix', function () {
 
     treasury = await ethers.getContractAt('REDACTEDTreasury', TREASURY_ADDRESS, multisig)
 
-    oldWxBtrfly = await ethers.getContractAt(
-      'WxBTRFLY',
+    oldWxbtrfly = await ethers.getContractAt(
+      'WXBTRFLY',
       '0x186e55c0bebd2f69348d94c4a27556d93c5bd36c',
     )
 
-    const WxBTRFLYFactory = await ethers.getContractFactory('wxBTRFLY')
+    const WXBTRFLYFactory = await ethers.getContractFactory('WXBTRFLY')
 
-    wxbtrfly = (await WxBTRFLYFactory.deploy(
+    wxbtrfly = (await WXBTRFLYFactory.deploy(
       STAKING_ADDRESS,
       BTRFLY_ADDRESS,
       XBTRFLY_ADDRESS,
-    )) as WxBTRFLY
+    )) as WXBTRFLY
 
     await wxbtrfly.deployed()
 
     console.log(' wxbtrfly deployed ')
 
-    // mint rewards to addreses for testing
+    //mint rewards to addreses for testing
     await treasury.queue('8', MULTISIG_ADDRESS)
     await treasury.toggle('8', MULTISIG_ADDRESS, ZERO_ADDRESS)
     await treasury.mintRewards(guy0.address, ethers.utils.parseUnits('1000', 'gwei'))
@@ -117,21 +118,29 @@ describe('wxBTRFLY post-fix', function () {
   })
 
   describe('Immediate Wrap/Unwrap Attack Proof', function () {
-    it('multi send tx', async () => {
-      const balance = await oldWxBtrfly.balanceOf(multisig.address)
-      await oldWxBtrfly.connect(multisig).unwrapToxBTRFLY(balance)
-      await wxbtrfly.connect(multisig).wrapFromxBTRFLY(balance)
-
-      const tx: TransactionRequest = {
-        data: calldata,
+    it('airdrop', async () => {
+      const balance = await oldWxbtrfly.balanceOf(multisig.address)
+      await oldWxbtrfly.connect(multisig).unwrapToxBTRFLY(balance)
+      await xbtrfly.connect(multisig).approve(wxbtrfly.address, ethers.constants.MaxUint256)
+      const xbtrflyBalance = await xbtrfly.balanceOf(multisig.address)
+      console.log(await wxbtrfly.connect(multisig).wrapFromxBTRFLY(xbtrflyBalance))
+      const balanceOnNew = await wxbtrfly.balanceOf(multisig.address)
+      console.log(balanceOnNew)
+      await wxbtrfly.approve(
+        '0x40A2aCCbd92BCA938b02010E17A5b8929b49130D',
+        ethers.constants.MaxInt256,
+      )
+      const tx = await multisig.sendTransaction({
         to: '0x40A2aCCbd92BCA938b02010E17A5b8929b49130D',
-      }
-      const signedTx = await multisig.signTransaction(tx)
-      await ethers.provider.sendTransaction(signedTx)
+        value: '0',
+        data: calldata,
+      })
+
+      await tx.wait(1)
     })
 
     it("Wrap / Unwrap xBTRFLY doesn't result in change in balance", async function () {
-      // wrap
+      //wrap
       await btrfly.connect(guy0).approve(staking.address, ethers.constants.MaxUint256)
       await staking.connect(guy0).stake(ethers.utils.parseUnits('1000', 'gwei'), guy0.address)
       await staking.claim(guy0.address)
@@ -141,11 +150,11 @@ describe('wxBTRFLY post-fix', function () {
       await xbtrfly.connect(guy0).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       await wxbtrfly.connect(guy0).wrapFromxBTRFLY(xbtrflyBalance)
 
-      // get balance
+      //get balance
       const wbalance = await wxbtrfly.balanceOf(guy0.address)
       console.log(' wbalance = ' + wbalance.toString())
 
-      // unwrap
+      //unwrap
       await wxbtrfly.connect(guy0).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       await wxbtrfly.connect(guy0).unwrapToxBTRFLY(wbalance)
 
@@ -157,15 +166,15 @@ describe('wxBTRFLY post-fix', function () {
     })
 
     it("Wrap / Unwrap BTRFLY doesn't result in change in balance", async function () {
-      // wrap
+      //wrap
       await btrfly.connect(guy0).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       await wxbtrfly.connect(guy0).wrapFromBTRFLY(ethers.utils.parseUnits('1000', 'gwei'))
 
-      // get balance
+      //get balance
       const wbalance = await wxbtrfly.balanceOf(guy0.address)
       console.log(' wbalance = ' + wbalance.toString())
 
-      // unwrap
+      //unwrap
       await wxbtrfly.connect(guy0).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       await wxbtrfly.connect(guy0).unwrapToBTRFLY(wbalance)
 
@@ -186,13 +195,13 @@ describe('wxBTRFLY post-fix', function () {
       await xbtrfly.connect(guy0).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       await wxbtrfly.connect(guy0).wrapFromxBTRFLY(xbtrflyBalance)
 
-      // get balance
+      //get balance
       const wbalance0 = await wxbtrfly.balanceOf(guy0.address)
 
       await btrfly.connect(guy1).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       await wxbtrfly.connect(guy1).wrapFromBTRFLY(ethers.utils.parseUnits('1000', 'gwei'))
 
-      // get balance
+      //get balance
       const wbalance1 = await wxbtrfly.balanceOf(guy0.address)
 
       expect(wbalance0.eq(wbalance1)).to.equal(true)
@@ -223,20 +232,20 @@ describe('wxBTRFLY post-fix', function () {
 
   describe('One Epoch Yield', function () {
     it('All tokens yield by same amount (exit ALL into xBTRFLY)', async function () {
-      // real index pre
+      //real index pre
       const ri0 = await wxbtrfly.realIndex()
       console.log('real index at t = N : ' + ri0.toString())
 
-      // guy0 holds xBTRFLY
+      //guy0 holds xBTRFLY
       await btrfly.connect(guy0).approve(staking.address, ethers.constants.MaxUint256)
       await staking.connect(guy0).stake(ethers.utils.parseUnits('1000', 'gwei'), guy0.address)
       await staking.claim(guy0.address)
 
-      // guy1 gets his wxBTRFLY using wrapFromBTRFLY
+      //guy1 gets his wxBTRFLY using wrapFromBTRFLY
       await btrfly.connect(guy1).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       await wxbtrfly.connect(guy1).wrapFromBTRFLY(ethers.utils.parseUnits('1000', 'gwei'))
 
-      // guy2 gets his wxBTRFLY using wrapFromxBTRFLY
+      //guy2 gets his wxBTRFLY using wrapFromxBTRFLY
       await btrfly.connect(guy2).approve(staking.address, ethers.constants.MaxUint256)
       await staking.connect(guy2).stake(ethers.utils.parseUnits('1000', 'gwei'), guy2.address)
       await staking.claim(guy2.address)
@@ -247,7 +256,7 @@ describe('wxBTRFLY post-fix', function () {
       await mineBlocks(2200)
       await staking.rebase()
 
-      // real index post
+      //real index post
       const ri1 = await wxbtrfly.realIndex()
       console.log('real index at t = N + 1 epoch : ' + ri1.toString())
 
@@ -257,7 +266,6 @@ describe('wxBTRFLY post-fix', function () {
       const xbwx0 = await xbtrfly.balanceOf(wxbtrfly.address)
       console.log('wx contract balance : ' + xbwx0)
 
-      await wxbtrfly.connect(guy1).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       const wb1 = await wxbtrfly.balanceOf(guy1.address)
       const exxb1 = await wxbtrfly.xBTRFLYValue(wb1)
       console.log('expected xb1 = ' + exxb1.toString())
@@ -268,7 +276,6 @@ describe('wxBTRFLY post-fix', function () {
       const xbwx1 = await xbtrfly.balanceOf(wxbtrfly.address)
       console.log('wx contract balance : ' + xbwx1)
 
-      await wxbtrfly.connect(guy2).approve(wxbtrfly.address, ethers.constants.MaxUint256)
       const wb2 = await wxbtrfly.balanceOf(guy2.address)
       const exxb2 = await wxbtrfly.xBTRFLYValue(wb2)
       console.log('expected xb2 = ' + exxb2.toString())
@@ -276,8 +283,36 @@ describe('wxBTRFLY post-fix', function () {
       const xb2 = await xbtrfly.balanceOf(guy2.address)
       console.log('real xb2 = ' + xb2.toString())
 
-      expect(xb1.eq(xb0)).to.equal(true)
-      expect(xb2.eq(xb0)).to.equal(true)
+      expect(xb1.sub(xb0).abs().lte(ethers.BigNumber.from('1000'))).to.equal(true)
+
+      expect(xb2.sub(xb0).abs().lte(ethers.BigNumber.from('1000'))).to.equal(true)
+    })
+  })
+
+  describe('exploit fix ', function () {
+    it('fixes the exploit', async function () {
+      //wrap
+      await btrfly.connect(guy1).approve(wxbtrfly.address, ethers.constants.MaxUint256)
+      await wxbtrfly.connect(guy1).wrapFromBTRFLY(ethers.utils.parseUnits('1000', 'gwei'))
+      //approve something for infinity
+      await wxbtrfly.connect(guy1).approve(wxbtrfly.address, ethers.constants.MaxUint256)
+      //ruggy tries to rug
+      await expect(
+        wxbtrfly.connect(ruggyMcRuggerson).transferFrom(guy1.address, wxbtrfly.address, '0'),
+      )
+      const wb1 = await wxbtrfly.balanceOf(guy1.address)
+      const ruggysAllowance = await wxbtrfly.allowance(guy1.address, ruggyMcRuggerson.address)
+      expect(ruggysAllowance.eq(ethers.BigNumber.from('0'))).to.equal(true)
+      await expect(
+        wxbtrfly
+          .connect(ruggyMcRuggerson)
+          .transferFrom(guy1.address, ruggyMcRuggerson.address, '1000'),
+      ).to.be.revertedWith('ERC20: transfer amount exceeds allowance')
+      await expect(
+        wxbtrfly
+          .connect(ruggyMcRuggerson)
+          .transferFrom(guy1.address, ruggyMcRuggerson.address, wb1),
+      ).to.be.revertedWith('ERC20: transfer amount exceeds allowance')
     })
   })
 })

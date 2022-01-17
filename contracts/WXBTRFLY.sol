@@ -753,91 +753,7 @@ interface IxBTRFLY {
     function gonsForBalance( uint amount ) external view returns ( uint );
 }
 
-interface IOwnable {
-  function owner() external view returns (address);
-
-  function renounceOwnership() external;
-  
-  function transferOwnership( address newOwner_ ) external;
-}
-
-contract Ownable is IOwnable {
-    
-  address internal _owner;
-
-  event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
-
-  constructor () {
-    _owner = msg.sender;
-    emit OwnershipTransferred( address(0), _owner );
-  }
-
-  function owner() public view override returns (address) {
-    return _owner;
-  }
-
-  modifier onlyOwner() {
-    require( _owner == msg.sender, "Ownable: caller is not the owner" );
-    _;
-  }
-
-  function renounceOwnership() public virtual override onlyOwner() {
-    emit OwnershipTransferred( _owner, address(0) );
-    _owner = address(0);
-  }
-
-  function transferOwnership( address newOwner_ ) public virtual override onlyOwner() {
-    require( newOwner_ != address(0), "Ownable: new owner is the zero address");
-    emit OwnershipTransferred( _owner, newOwner_ );
-    _owner = newOwner_;
-  }
-}
-
-abstract contract FrozenToken is ERC20, Ownable {
-  using SafeERC20 for ERC20;  
-  using SafeMath for uint256;
-
-  bool public isTokenFrozen = true;
-  mapping (address => bool ) public isAuthorisedOperators;
-
-
-  modifier onlyAuthorisedOperators () {
-    require(!isTokenFrozen || isAuthorisedOperators[msg.sender], 'Frozen: token frozen or msg.sender not authorised');
-    _;
-  }
-
-
-  function unFreezeToken () external onlyOwner () {
-    isTokenFrozen = false;
-  }
-
-  function changeAuthorisation (address operator, bool status) public onlyOwner {
-    require(operator != address(0), "Frozen: new operator cant be zero address");
-    isAuthorisedOperators[operator] = status; 
-  }
-
-
-  function addBatchAuthorisedOperators(address[] memory authorisedOperatorsArray) external onlyOwner {
-    for (uint i = 0; i < authorisedOperatorsArray.length; i++) {
-    changeAuthorisation(authorisedOperatorsArray[i],true);
-    }
-  }
-
-
-  function transfer(address recipient, uint256 amount) public virtual override onlyAuthorisedOperators returns (bool){
-  _transfer(msg.sender, recipient, amount);
-    return true;
-  }
-
-  function transferFrom(address sender, address recipient, uint256 amount) public virtual override onlyAuthorisedOperators returns (bool) {
-    _transfer(sender, recipient, amount);
-    _approve(sender, msg.sender, allowance(sender, recipient ).sub(amount, "ERC20: transfer amount exceeds allowance"));
-    return true;
-  }
-
-}
-
-contract wxBTRFLY is FrozenToken {
+contract wxBTRFLY is ERC20 {
     using Address for address;
     using SafeMath for uint;
 
@@ -848,7 +764,7 @@ contract wxBTRFLY is FrozenToken {
     //DON'T EVER F***ING CHANGE PLS - thank you :) | DOUBLE CHECK on Etherscan to verify number is correct
     uint public immutable realINDEX = 23158417847463239084714197001737581570653996933128112807891516 * 1e9; 
 
-    constructor( address _staking, address _BTRFLY, address _xBTRFLY ) ERC20( 'wxBTRFLY', 'wxBTRFLY' ) {
+    constructor( address _staking, address _BTRFLY, address _xBTRFLY ) ERC20( "wxBTRFLY", "wxBTRFLY" ) {
         require( _staking != address(0) );
         staking = _staking;
         require( _BTRFLY != address(0) );
