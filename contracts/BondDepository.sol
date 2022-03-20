@@ -828,6 +828,7 @@ contract REDACTEDBondDepository is Ownable {
         address _depositor
     ) external returns ( uint ) {
         require( _depositor != address(0), "Invalid address" );
+        require( _depositor == msg.sender , "Depositor not msg.sender" );
 
         decayDebt();
         require( totalDebt <= terms.maxDebt, "Max capacity reached" );
@@ -848,7 +849,7 @@ contract REDACTEDBondDepository is Ownable {
 
         // profits are calculated
         uint titheBTRFLY = payout.mul(terms.tithe).div(100000);
-        uint fee = payout.mul( terms.fee ).div( 10000 );
+        uint fee = payout.mul( terms.fee ).div( 100000 );
         uint profit = value.sub( payout ).sub( fee );
 
         /**
